@@ -4,12 +4,7 @@
 	
 # importing cv2 
 import cv2 
-	
-# path of the certificate template
-path = r'C:\Users\padma priya\Desktop\testmailidvision\c.jpg'
-	
-# Reading an image in default mode 
-image = cv2.imread(path) 
+
 	
 import csv, smtplib, ssl
 import cv2
@@ -31,7 +26,12 @@ with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
         next(reader)  # Skip header row
         for a,email,name in reader:
             text = name
-
+	
+# path of the certificate template
+	    path = r'C:\Users\padma priya\Desktop\testmailidvision\c.jpg'
+	
+# Reading an image in default mode 
+	    image = cv2.imread(path) 
 # font 
             font = cv2.FONT_HERSHEY_SIMPLEX 
 
