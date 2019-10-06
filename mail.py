@@ -5,7 +5,7 @@
 # importing cv2 
 import cv2 
 	
-# path 
+# path of the certificate template
 path = r'C:\Users\padma priya\Desktop\testmailidvision\c.jpg'
 	
 # Reading an image in default mode 
@@ -20,8 +20,8 @@ from email.mime.text import MIMEText
 from email.mime.base import MIMEBase 
 from email import encoders 
 
-fromaddr = "testmailidvision@gmail.com"
-password = "kesaripadmapriya"
+fromaddr = str(input("EnterSender Mail id:"))
+password = str(input("Enter Password:"))
 
 context = ssl.create_default_context()
 with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
